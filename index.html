@@ -22,10 +22,56 @@
         background-image: url("backg66.jpg");
 
         color: white;
-        animation: colours 1s infinite;
         font-size: 1.2em;
         text-align: center;
+        animation: epic 300ms step-end infinite;
     }
+
+    body > * {
+        animation: colours 1s infinite;
+    }
+
+    @keyframes epic {
+        0% {
+            cursor: url(sword_01.png), auto;
+        }
+        16.67% {
+            cursor: url(sword_02.png), auto;
+        }
+        33.33% {
+            cursor: url(sword_03.png), auto;
+        }
+        50% {
+            cursor: url(sword_04.png), auto;
+        }
+        66.67% {
+            cursor: url(sword_05.png), auto;
+        }
+        83.33% {
+            cursor: url(sword_06.png), auto;
+        }
+    }
+    @keyframes linkcur {
+        0% {
+            cursor: url(pickaxe_01.png), auto;
+        }
+        16.67% {
+            cursor: url(pickaxe_03.png), auto;
+        }
+        33.33% {
+            cursor: url(pickaxe_05.png), auto;
+        }
+        50% {
+            cursor: url(pickaxe_07.png), auto;
+        }
+        66.67% {
+            cursor: url(pickaxe_09.png), auto;
+        }
+        83.33% {
+            cursor: url(pickaxe_11.png), auto;
+        }
+    }
+
 
     .bad {
         margin: 8px;
@@ -63,10 +109,7 @@
     a:hover {
         display:inline-block;
         transform:scale(1);
-        animation-name: linkhover;
-        animation-duration: 0.4s;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
+        animation: linkcur 200ms step-end infinite, linkhover 400ms linear infinite;
         color: rgb(0, 255, 64);
     }
 
